@@ -186,20 +186,14 @@ puts this is terrible code
 <p>Slices</p>
 
 <p>Maps
-<!-- begin code{:lang=>"go", :name=>"code/maps.go"} --></p>
+<!-- begin code{:part=>"maps", :lang=>"go", :name=>"code/variables.go"} --></p>
 
 <pre class='code'>
-<pre class="all_hallows_eve"><span class="Keyword">package</span> main
-
-<span class="Keyword">import</span> <span class="String"><span class="String">&quot;</span>fmt<span class="String">&quot;</span></span>
-
-<span class="SourceBase"><span class="Keyword">func</span> <span class="FunctionName">main</span>() <span class="SourceBase">{</span></span>
-<span class="SourceBase"><span class="SourceBase">  <span class="SourceBase"><span class="SourceBase">m <span class="Keyword">:=</span></span></span> <span class="Keyword">map</span>[<span class="SourceBase">string</span>] <span class="SourceBase">int</span><span class="SourceBase">{}</span></span></span>
-<span class="SourceBase"><span class="SourceBase">  m[<span class="String"><span class="String">&quot;</span>price<span class="String">&quot;</span></span>] = <span class="Constant">5</span></span></span>
-<span class="SourceBase"><span class="SourceBase">}</span></span>
+<pre class="all_hallows_eve">  <span class="SourceBase"><span class="SourceBase">m <span class="Keyword">:=</span></span></span> <span class="Keyword">map</span>[<span class="SourceBase">string</span>] <span class="SourceBase">int</span><span class="SourceBase">{}</span>
+  m[<span class="String"><span class="String">&quot;</span>price<span class="String">&quot;</span></span>] = <span class="Constant">5</span>
 </pre></pre>
 
-<div class="codeurl">code/maps.go</div>
+<div class="codeurl">code/variables.go</div>
 
 <p><!-- end code --></p>
 
@@ -230,6 +224,19 @@ puts this is terrible code
 
 </div><div class='slide'>
 
+<h1>Go &#8800; C</h1>
+
+<ul>
+<li>Semicolons optional</li>
+<li>No parentheses in <code>if</code>s and <code>for</code>s</li>
+<li>Garbage collected</li>
+<li>[TODO]</li>
+</ul>
+
+
+
+</div><div class='slide'>
+
 <h1>Methods</h1>
 
 <ul>
@@ -250,6 +257,12 @@ puts this is terrible code
 </div><div class='slide'>
 
 <h1>Goroutines</h1>
+
+<ul>
+<li>NOT threads</li>
+<li>Independent code</li>
+<li>Communication over shared memory</li>
+</ul>
 
 
 
