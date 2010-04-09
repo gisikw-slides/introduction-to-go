@@ -6,7 +6,7 @@ footer: <a href='http://www.kevingisi.com'>Blog</a> | <a href='http://speakerrat
 subfooter: Copyright &copy; 2010 by Kevin W. Gisi
 slides-url: http://gisikw-slides.github.com/introduction-to-go/
 code-engine: uv
-code-theme: eiffel
+code-theme: all_hallows_eve
 code-line-numbers: false
 
 # Summary
