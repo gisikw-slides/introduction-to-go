@@ -2,7 +2,7 @@ package main
 
 func main() {
 
-  //#START:declaration_examples
+  //#START:declarations
   // Declare a variable
   var s string = "";
 
@@ -11,6 +11,6 @@ func main() {
 
   // Syntactic shorthand - initializing declaration
   s := "";
-  //#END:declaration_examples
+  //#END:declarations
 
 }
