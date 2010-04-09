@@ -13,4 +13,9 @@ func main() {
   s := "";
   //#END:declarations
 
+  //#START:maps
+  m := map[string] int{}
+  m["price"] = 5
+  //#END:maps
+
 }
