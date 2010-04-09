@@ -25,7 +25,7 @@ Like C
 # We Already Have Fun Languages!
 <%= code 'code/ruby.rb' %>
 
-# [INSERT TITLE]
+# Hello, world
 <%= code 'code/hello_world.go', :lang => "go" %>
 
 # Specifications
@@ -36,9 +36,32 @@ Like C
 - Strongly typed (explicit or inferred)
 
 # Variables &amp; Types
+- int, float
+- int8, int32, float64
+- uint, ufloat
+- string
+
+# Variables: Pointers and Arrays
+Pointers
+- [TODO]
+
+Arrays
+- NOT pointers
+- Referenced via slices
+
+# Variables: Slices and Maps 
+Slices
+
+Maps
+<%= code 'code/maps.go', :lang => 'go' %>
+
+# Variable Declaration
+
 <%= code 'code/declaring_variables.go', :lang => "go" %>
 
 # Methods
+- Pass by value
+- Multiple return values
 
 # Concurrency
 <img src='images/sheldon.png' />
