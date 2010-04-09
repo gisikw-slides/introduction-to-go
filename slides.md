@@ -35,6 +35,11 @@ Like C
 - Concurrent
 - Strongly typed (explicit or inferred)
 
+# Variables &amp; Types
+<%= code 'code/declaring_variables.go', :lang => "go" %>
+
+# Methods
+
 # Concurrency
 <img src='images/sheldon.png' />
 
