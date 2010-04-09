@@ -53,7 +53,7 @@ Arrays
 Slices
 
 Maps
-<%= code 'code/maps.go#maps', :lang => 'go' %>
+<%= code 'code/variables.go#maps', :lang => 'go' %>
 
 # Variable Declaration
 
