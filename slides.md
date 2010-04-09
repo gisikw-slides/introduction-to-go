@@ -26,7 +26,7 @@ Like C
 <%= code 'code/ruby.rb' %>
 
 # [INSERT TITLE]
-<%= code 'code/hello_world.go' %>
+<%= code 'code/hello_world.go', :lang => "go" %>
 
 # Specifications
 
