@@ -13,7 +13,7 @@ code-line-numbers: false
 Go is a brand-spanking-new systems language that Google released in November, 2009. Every wonder how awesome C would be if it was garbage-collected, concurrent, and didn't take a few weeks to compile? Wake up; it's here! We'll take a look at this new language that steals some of the dynamic flexibility of Python and Ruby, the performance of C, and a compile time that you'll miss if you blink.
 
 # Why Do We Need a Systems Language?
-<pre>
+<% uv do %>>
 #include <stdio.h>
 main(t,_,a)char *a;{return!0<t?t<3?main(-79,-13,a+main(-87,1-_,
 main(-86,0,a+1)+a)):1,t<_?main(t+1,_,a):3,main(-94,-27+t,a)&&t==2?_<13?
@@ -28,7 +28,7 @@ iwk{KK{nl]!/w{%'l##w#' i; :{nl]'/*{q#'ld;r'}{nlwb!/*de}'c \
 :t<-50?_==*a?putchar(31[a]):main(-65,_,a+1):main((*a=='/')+t,_,a+1)
   :0<t?main(2,2,"%s"):*a=='/'||main(0,main(-61,*a,
   "!ek;dc i@bK'(q)-[w]*%n+r3#l,{}:\nuwloca-O;m .vpbks,fxntdCeghiry"),a+1);}
-</pre>
+<% end %>
 
 # Specifications
 
