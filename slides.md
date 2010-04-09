@@ -13,21 +13,24 @@ code-line-numbers: false
 
 Go is a brand-spanking-new systems language that Google released in November, 2009. Every wonder how awesome C would be if it was garbage-collected, concurrent, and didn't take a few weeks to compile? Wake up; it's here! We'll take a look at this new language that steals some of the dynamic flexibility of Python and Ruby, the performance of C, and a compile time that you'll miss if you blink.
 
-# Why Do We Need a Systems Language?
+# Why Go?
+
+- It's a systems language
+- It's fun - REWORD
+
+# We Already Have a Systems Language!
+Like C
 <% code :lang => "c" do %>
-_(__,___,____,_____){___/__<=_____?_(__,___+_____,____,_____):!(___%__)?_(__,___+_____,___%__,_____):___%__==___/
-__&&!____?(printf("%d\t",___/__),_(__,___+_____,____,_____)):(___%__>_____&&___%__<___/__)?_(__,___+_____,
-____+!(___/__%(___%__)),_____):___<__*__?_(__,___+_____,____,_____):0;}main(void){_(100, 0, 0, 1);}
+void primes(int m, int t, int c) {
+  ((t / m) <= 1) ? primes(m,t+1,c) : !(t % m) ? primes(m,t+1, t % m) : 
+  ((t % m)==(t / m) && !c) ? (printf("%d\t",(t / m)), primes(m,t+1,c)) : 
+  ((t % m)> 1 && (t % m) < (t / m)) ? primes(m,t+1,c + !((t / m) % (t % m))) : 
+  (t < m * m) ? primes(m,t+1,c) : 0;
+}
 <% end %>
 
-# Ruby Code
-<% code do %>
-  puts "hey"
-  5 + 5 = 10
-  def foo
-    eval("4")
-  end
-<% end %>
+# We Already Have Fun Languages
+<%= code 'code/ruby.rb' %>
 
 # Specifications
 
