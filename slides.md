@@ -20,17 +20,10 @@ Go is a brand-spanking-new systems language that Google released in November, 20
 
 # We Already Have a Systems Language!
 Like C
-<% code :lang => "c" do %>
-void primes(int m, int t, int c) {
-  ((t / m) <= 1) ? primes(m,t+1,c) : !(t % m) ? primes(m,t+1, t % m) : 
-  ((t % m)==(t / m) && !c) ? (printf("%d\t",(t / m)), primes(m,t+1,c)) : 
-  ((t % m)> 1 && (t % m) < (t / m)) ? primes(m,t+1,c + !((t / m) % (t % m))) : 
-  (t < m * m) ? primes(m,t+1,c) : 0;
-}
-<% end %>
+<% code 'code/c.c' :lang => "c" do %>
 
 # We Already Have Fun Languages
-<%= code 'code/ruby.rb' %>
+<% code 'code/ruby.rb' %>
 
 # Specifications
 
