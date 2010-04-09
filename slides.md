@@ -57,7 +57,7 @@ Maps
 
 # Variable Declaration
 
-<%= code 'code/declaring_variables.go', :lang => "go" %>
+<%= code 'code/variables.go#declaring_variables', :lang => "go" %>
 
 # Methods
 - Pass by value
