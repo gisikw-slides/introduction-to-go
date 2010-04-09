@@ -59,15 +59,30 @@
 
 </div><div class='slide'>
 
-<h1>Why Do We Need a Systems Language?</h1>
+<h1>Why Go?</h1>
 
-<p><!-- begin code{:lang=>"c"} --></p>
+<ul>
+<li>It's a systems language</li>
+<li>It's fun - REWORD</li>
+</ul>
+
+
+
+</div><div class='slide'>
+
+<h1>We Already Have a Systems Language!</h1>
+
+<p>Like C
+<!-- begin code{:lang=>"c"} --></p>
 
 <pre class='code'>
 <pre class="all_hallows_eve">
-_(__,___,____,_____){___/__&lt;=_____?_(__,___+_____,____,_____):!(___%__)?_(__,___+_____,___%__,_____):___%__==___/
-__&amp;&amp;!____?(<span class="SupportFunction">printf</span>(<span class="String"><span class="String">&quot;</span><span class="Constant">%d</span><span class="StringEscapes">\t</span><span class="String">&quot;</span></span>,___/__),_(__,___+_____,____,_____)):(___%__&gt;_____&amp;&amp;___%__&lt;___/__)?_(__,___+_____,
-____+!(___/__%(___%__)),_____):___&lt;__*__?_(__,___+_____,____,_____):<span class="Constant">0</span>;}main(<span class="SourceBase">void</span>){_(<span class="Constant">100</span>, <span class="Constant">0</span>, <span class="Constant">0</span>, <span class="Constant">1</span>);}
+<span class="SourceBase">void</span><span class="SourceBase"> <span class="FunctionName">prim<span class="FunctionName">es</span></span>(<span class="SourceBase">int</span> m, <span class="SourceBase">int</span> t, <span class="SourceBase">int</span> c<span class="SourceBase">)</span></span> {
+  ((t / m) &lt;= <span class="Constant">1</span>) ? primes(m,t+<span class="Constant">1</span>,c) : !(t % m) ? primes(m,t+<span class="Constant">1</span>, t % m) : 
+  ((t % m)==(t / m) &amp;&amp; !c) ? (<span class="SupportFunction">printf</span>(<span class="String"><span class="String">&quot;</span><span class="Constant">%d</span><span class="StringEscapes">\t</span><span class="String">&quot;</span></span>,(t / m)), primes(m,t+<span class="Constant">1</span>,c)) : 
+  ((t % m)&gt; <span class="Constant">1</span> &amp;&amp; (t % m) &lt; (t / m)) ? primes(m,t+<span class="Constant">1</span>,c + !((t / m) % (t % m))) : 
+  (t &lt; m * m) ? primes(m,t+<span class="Constant">1</span>,c) : <span class="Constant">0</span>;
+}
 </pre></pre>
 
 <p><!-- end code --></p>
@@ -76,18 +91,21 @@ ____+!(___/__%(___%__)),_____):___&lt;__*__?_(__,___+_____,____,_____):<span cla
 
 </div><div class='slide'>
 
-<h1>Ruby Code</h1>
+<h1>We Already Have Fun Languages</h1>
 
-<p><!-- begin code{} --></p>
+<p><!-- begin code{:name=>"code/ruby.rb"} --></p>
 
 <pre class='code'>
-<pre class="all_hallows_eve">
-  puts <span class="String"><span class="String">&quot;</span>hey<span class="String">&quot;</span></span>
-  <span class="Constant">5</span> <span class="Keyword">+</span> <span class="Constant">5</span> <span class="Keyword">=</span> <span class="Constant">10</span>
-  <span class="SourceBase"><span class="Keyword">def</span> <span class="FunctionName">foo</span></span>
-    <span class="SourceBase"><span class="FunctionName">eval</span></span><span class="SourceBase">(</span><span class="String"><span class="String">&quot;</span>4<span class="String">&quot;</span></span><span class="SourceBase">)</span>
+<pre class="all_hallows_eve"><span class="SourceBase"><span class="Keyword">module</span> <span class="TypeName">Kernel</span></span>
+  <span class="SourceBase"><span class="Keyword">def</span> <span class="FunctionName">method_missing</span><span class="SourceBase">(</span><span class="FunctionArgument">cmd<span class="FunctionArgument">,</span><span class="Keyword">*</span>args</span><span class="SourceBase">)</span></span>
+    args<span class="SourceBase"><span class="SourceBase">.</span><span class="FunctionName">empty?</span></span> <span class="Keyword">?</span> cmd<span class="SourceBase"><span class="SourceBase">.</span><span class="FunctionName">to_s</span></span> <span class="SourceBase">:</span> <span class="String"><span class="String">&quot;</span><span class="SourceBase"><span class="SourceBase">#{</span>cmd<span class="SourceBase">}</span></span> <span class="SourceBase"><span class="SourceBase">#{</span>args<span class="SourceBase"><span class="SourceBase">.</span><span class="FunctionName">join</span></span><span class="SourceBase">(</span><span class="String"><span class="String">&quot;</span> <span class="String">&quot;</span></span><span class="SourceBase">)</span><span class="SourceBase">}</span></span><span class="String">&quot;</span></span>
   <span class="Keyword">end</span>
+<span class="Keyword">end</span>
+
+puts this is terrible code
 </pre></pre>
+
+<div class="codeurl">code/ruby.rb</div>
 
 <p><!-- end code --></p>
 
