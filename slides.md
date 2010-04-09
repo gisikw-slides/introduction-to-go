@@ -20,10 +20,10 @@ Go is a brand-spanking-new systems language that Google released in November, 20
 
 # We Already Have a Systems Language!
 Like C
-<% code 'code/c.c', :lang => "c" %>
+<%= code 'code/c.c', :lang => "c" %>
 
 # We Already Have Fun Languages
-<% code 'code/ruby.rb' %>
+<%= code 'code/ruby.rb' %>
 
 # Specifications
 
