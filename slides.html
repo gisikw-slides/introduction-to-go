@@ -114,7 +114,7 @@ puts this is terrible code
 
 </div><div class='slide'>
 
-<h1>[INSERT TITLE]</h1>
+<h1>Hello, world</h1>
 
 <p><!-- begin code{:lang=>"go", :name=>"code/hello_world.go"} --></p>
 
@@ -151,6 +151,64 @@ puts this is terrible code
 
 <h1>Variables &amp; Types</h1>
 
+<ul>
+<li>int, float</li>
+<li>int8, int32, float64</li>
+<li>uint, ufloat</li>
+<li>string</li>
+</ul>
+
+
+
+</div><div class='slide'>
+
+<h1>Variables: Pointers and Arrays</h1>
+
+<p>Pointers</p>
+
+<ul>
+<li>[TODO]</li>
+</ul>
+
+<p>Arrays</p>
+
+<ul>
+<li>NOT pointers</li>
+<li>Referenced via slices</li>
+</ul>
+
+
+
+</div><div class='slide'>
+
+<h1>Variables: Slices and Maps</h1>
+
+<p>Slices</p>
+
+<p>Maps
+<!-- begin code{:lang=>"go", :name=>"code/maps.go"} --></p>
+
+<pre class='code'>
+<pre class="all_hallows_eve"><span class="Keyword">package</span> main
+
+<span class="Keyword">import</span> <span class="String"><span class="String">&quot;</span>fmt<span class="String">&quot;</span></span>
+
+<span class="SourceBase"><span class="Keyword">func</span> <span class="FunctionName">main</span>() <span class="SourceBase">{</span></span>
+<span class="SourceBase"><span class="SourceBase">  <span class="SourceBase"><span class="SourceBase">m <span class="Keyword">:=</span></span></span> <span class="Keyword">map</span>[<span class="SourceBase">string</span>] <span class="SourceBase">int</span><span class="SourceBase">{}</span></span></span>
+<span class="SourceBase"><span class="SourceBase">  m[<span class="String"><span class="String">&quot;</span>price<span class="String">&quot;</span></span>] = <span class="Constant">5</span></span></span>
+<span class="SourceBase"><span class="SourceBase">}</span></span>
+</pre></pre>
+
+<div class="codeurl">code/maps.go</div>
+
+<p><!-- end code --></p>
+
+
+
+</div><div class='slide'>
+
+<h1>Variable Declaration</h1>
+
 <p><!-- begin code{:lang=>"go", :name=>"code/declaring_variables.go"} --></p>
 
 <pre class='code'>
@@ -173,6 +231,11 @@ puts this is terrible code
 </div><div class='slide'>
 
 <h1>Methods</h1>
+
+<ul>
+<li>Pass by value</li>
+<li>Multiple return values</li>
+</ul>
 
 
 
