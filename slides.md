@@ -16,14 +16,17 @@ Go is a brand-spanking-new systems language that Google released in November, 20
 # Why Go?
 
 - It's a systems language
-- It's fun - REWORD
+- It's fun, like dynamic languages
 
 # We Already Have a Systems Language!
 Like C
 <%= code 'code/c.c', :lang => "c" %>
 
-# We Already Have Fun Languages
+# We Already Have Fun Languages!
 <%= code 'code/ruby.rb' %>
+
+# [INSERT TITLE]
+<%= code 'code/hello_world.go' %>
 
 # Specifications
 
