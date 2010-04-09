@@ -1,5 +1,4 @@
-TITLE="Introduction to Go"
-
+TITLE = "Introduction to Go"
 LOCATIONS = <<-END
 Twin Cities Code Camp 8&mdash;April 10, 2010
 END
@@ -9,7 +8,7 @@ task :default do
     git checkout gh-pages
     git merge master
     slideshow slides.md -t kevingisi.txt
-    prince slides.html -o handout.pdf
+    prince -s http://www.kevingisi.com/stylesheets/slides.css slides.html -o handout.pdf
   END
   File.open("index.html","w"){|f|f.write(index <<-END
     <h2>#{TITLE}</h2>
