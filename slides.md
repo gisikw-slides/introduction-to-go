@@ -2,7 +2,7 @@ author: Kevin W. Gisi
 company: Twin Cities Code Camp 8&mdash;April 10, 2010
 title: Introduction to Go
 subtitle:
-footer: <a href='http://www.kevingisi.com'>Blog</a> | <a href='http://speakerrate.com/talks/2116-introduction-to-go'>SpeakerRate</a>
+footer: <a href='http://www.kevingisi.com'>Blog</a> | <a href='http://speakerrate.com/talks/2116-introduction-to-go'>SpeakerRate</a> | <a href="http://github.com/gisikw-slides/introduction-to-go">Source Code</a>
 subfooter: Copyright &copy; 2010 by Kevin W. Gisi
 slides-url: http://gisikw-slides.github.com/introduction-to-go/
 code-engine: uv
@@ -34,3 +34,10 @@ Like C
 - Imperative, structured
 - Concurrent
 - Strongly typed (explicit or inferred)
+
+# Concurrency
+<img src='images/sheldon.png' />
+
+# Goroutines
+
+# Channels
