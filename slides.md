@@ -53,11 +53,17 @@ Arrays
 Slices
 
 Maps
-<%= code 'code/maps.go', :lang => 'go' %>
+<%= code 'code/maps.go#maps', :lang => 'go' %>
 
 # Variable Declaration
 
 <%= code 'code/variables.go#declarations', :lang => "go" %>
+
+# Go &#8800; C
+- Semicolons optional
+- No parentheses in <code>if</code>s and <code>for</code>s
+- Garbage collected
+- [TODO]
 
 # Methods
 - Pass by value
@@ -67,5 +73,8 @@ Maps
 <img src='images/sheldon.png' />
 
 # Goroutines
+- NOT threads
+- Independent code
+- Communication over shared memory
 
 # Channels
