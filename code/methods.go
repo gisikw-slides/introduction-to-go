@@ -45,6 +45,6 @@ func readFile(name string) (out string, err string) {
 func gimmeSix() (value int, err string) {
   // value and err are set to nil
   value = 5
-  return // implicitly returns 5, niln
+  return // implicitly returns 5, nil
 }
 //#END:named_results
