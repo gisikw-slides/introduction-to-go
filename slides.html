@@ -493,11 +493,9 @@ x <span class="Keyword">=</span> <span class="SourceBase">[</span><span class="C
 <pre class='code'>
 <pre class="all_hallows_eve"><span class="Keyword">type</span> <span class="SourceBase">Spider</span> <span class="Keyword">interface</span> <span class="SourceBase">{</span>
 <span class="SourceBase"><span class="SourceBase"><span class="SourceBase">  </span><span class="SupportFunction">CreateWebs</span>(</span>)</span>
-<span class="SourceBase"><span class="SourceBase"><span class="SourceBase">  </span><span class="SupportFunction">ClimbWalls</span>(</span>)</span>
 <span class="SourceBase">}</span>
 
 <span class="Keyword">type</span> <span class="SourceBase">Man</span> <span class="Keyword">interface</span> <span class="SourceBase">{</span>
-<span class="SourceBase"><span class="SourceBase"><span class="SourceBase">  </span><span class="SupportFunction">TakePhotos</span>(</span>)</span>
 <span class="SourceBase"><span class="SourceBase"><span class="SourceBase">  </span><span class="SupportFunction">MissUncleBen</span>(</span>)</span>
 <span class="SourceBase">}</span>
 
@@ -505,6 +503,8 @@ x <span class="Keyword">=</span> <span class="SourceBase">[</span><span class="C
 <span class="SourceBase">  <span class="SourceBase">Spider</span></span>
 <span class="SourceBase">  <span class="SourceBase">Man</span></span>
 <span class="SourceBase">}</span>
+
+<span class="SourceBase"><span class="Keyword">func</span> (<span class="SourceBase">m SpiderMan</span>) <span class="FunctionName">FightGreenGoblin</span>() <span class="SourceBase">{}</span></span> <span class="Comment"><span class="Comment">//</span> Target must CreateWebs() and MissUncleBen()</span>
 </pre></pre>
 
 <div class="codeurl">code/interfaces.go</div>
@@ -522,11 +522,9 @@ x <span class="Keyword">=</span> <span class="SourceBase">[</span><span class="C
 <pre class='code'>
 <pre class="all_hallows_eve"><span class="Keyword">struct</span> <span class="SourceBase">Spider</span> <span class="Keyword">interface</span> <span class="SourceBase">{</span>
 <span class="SourceBase"><span class="SourceBase"><span class="SourceBase">  </span><span class="SupportFunction">CreateWebs</span>(</span>)</span>
-<span class="SourceBase"><span class="SourceBase"><span class="SourceBase">  </span><span class="SupportFunction">ClimbWalls</span>(</span>)</span>
 <span class="SourceBase">}</span>
 
 <span class="Keyword">struct</span> <span class="SourceBase">Man</span> <span class="Keyword">interface</span> <span class="SourceBase">{</span>
-<span class="SourceBase"><span class="SourceBase"><span class="SourceBase">  </span><span class="SupportFunction">TakePhotos</span>(</span>)</span>
 <span class="SourceBase"><span class="SourceBase"><span class="SourceBase">  </span><span class="SupportFunction">MissUncleBen</span>(</span>)</span>
 <span class="SourceBase">}</span>
 
@@ -606,6 +604,8 @@ x <span class="Keyword">=</span> <span class="SourceBase">[</span><span class="C
 </div><div class='slide'>
 
 <h1>Channels</h1>
+
+<p><img src='images/the_lake_house.jpg'/></p>
 
 <ul>
 <li>Like Unix pipes</li>
@@ -706,6 +706,65 @@ x <span class="Keyword">=</span> <span class="SourceBase">[</span><span class="C
 <div class="codeurl">code/concurrency.go</div>
 
 <p><!-- end code --></p>
+
+
+
+</div><div class='slide'>
+
+<h1>Packages and Libraries</h1>
+
+<ul>
+<li>os</li>
+<li>net</li>
+<li>websocket</li>
+<li>math</li>
+<li>strings</li>
+<li>bufio</li>
+<li>encoding</li>
+<li>json</li>
+<li>testing</li>
+<li>regexp</li>
+</ul>
+
+
+
+</div><div class='slide'>
+
+<h1>What Should You Use It For?</h1>
+
+<ul>
+<li>Not yet ready for production use</li>
+<li>Systems work</li>
+<li>High performance</li>
+<li>Fun!</li>
+</ul>
+
+<p>Help develop libraries you want to see!</p>
+
+
+
+</div><div class='slide'>
+
+<h1>Additional Information</h1>
+
+<ul>
+<li><a href='http://golang.org'>http://golang.org</a></li>
+<li><a href='http://code.google.com/p/go/wiki/WikiIndex'>Go Wiki</a></li>
+<li><a href="http://www.youtube.com/watch?v=rKnDgT73v8s'>Google Tech Talk</a></li>
+</ul>
+
+
+
+</div><div class='slide'>
+
+<h1>Questions? Comments?</h1>
+
+<p><img src='images/go_board.jpg'/>
+Thank you!</p>
+
+<p>Kevin W. Gisi</p>
+
+<p>&lt;<a href='mailto:kevin@kevingisi.com'>kevin@kevingisi.com</a>&gt;</p>
 
 </div></div>
 
