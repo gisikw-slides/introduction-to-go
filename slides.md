@@ -148,7 +148,16 @@ How do we access them?
 - Communicate across goroutines
 - Optionally blocking/non-blocking
 
-# Channel Example
+# Channel Example: Communication
 <%= code 'code/concurrency.go#channels', :lang => 'go' %>
+
+# Channel Example: Asynchronous
+<%= code 'code/concurrency.go#asynchronous_channels', :lang => 'go' %>
+
+# Channel Example: Semaphore
+<%= code 'code/concurrency.go#semaphore', :lang => 'go' %>
+
+# Channel Example: Thread.join
+<%= code 'code/concurrency.go#thread_join', :lang => 'go' %>
 
 # Interfaces
