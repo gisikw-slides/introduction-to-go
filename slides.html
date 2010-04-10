@@ -156,6 +156,19 @@ puts this is terrible code
 
 <p><s>Go is slow at runtime AND at compile time!</s></p>
 
+<ul>
+<li>1/2&mdash;1/3 LOC for C++ benchmarks</li>
+<li>1&mdash;1/16 of the speed (libraries?)</li>
+</ul>
+
+<p>Priorities:</p>
+
+<ul>
+<li>Compile time</li>
+<li>Performance</li>
+<li>Readability</li>
+</ul>
+
 
 
 </div><div class='slide'>
@@ -215,7 +228,8 @@ puts this is terrible code
 <p>Pointers</p>
 
 <ul>
-<li>[TODO]</li>
+<li>Use them for reference</li>
+<li>DON'T manipulate them!</li>
 </ul>
 
 <p>Arrays
@@ -235,7 +249,8 @@ puts this is terrible code
 
 <h1>Variables: Slices and Maps</h1>
 
-<p>Slices</p>
+<p>Slices
+[TODO]</p>
 
 <p>Maps
 <!-- begin code{:part=>"maps", :lang=>"go", :name=>"code/variables.go"} --></p>
@@ -303,6 +318,61 @@ puts this is terrible code
 
 <h1>What? Multiple Return Values?!</h1>
 
+<p><!-- begin code{:part=>"multiple_return", :lang=>"go", :name=>"code/methods.go"} --></p>
+
+<pre class='code'>
+<pre class="all_hallows_eve"><span class="SourceBase"><span class="Keyword">func</span> <span class="FunctionName">gimmeFive</span>() (<span class="SourceBase">int, string</span>) <span class="SourceBase">{</span></span>
+<span class="SourceBase"><span class="SourceBase">  <span class="Keyword">return</span> <span class="Constant">5</span>, <span class="String"><span class="String">&quot;</span>thanks for asking!<span class="String">&quot;</span></span></span></span>
+<span class="SourceBase"><span class="SourceBase">}</span></span>
+</pre></pre>
+
+<div class="codeurl">code/methods.go</div>
+
+<p><!-- end code --></p>
+
+<p>How do we access them?
+<!-- begin code{:part=>"call_gimme_five", :lang=>"go", :name=>"code/methods.go"} --></p>
+
+<pre class='code'>
+<pre class="all_hallows_eve">  <span class="SourceBase"><span class="SourceBase">x, message <span class="Keyword">:=</span></span></span><span class="SourceBase"><span class="SourceBase"> </span><span class="SupportFunction">gimmeFive</span>(</span>)
+</pre></pre>
+
+<div class="codeurl">code/methods.go</div>
+
+<p><!-- end code --></p>
+
+
+
+</div><div class='slide'>
+
+<h1>Why Multiple Return Values?</h1>
+
+<p><!-- begin code{:part=>"why_multiple", :lang=>"go", :name=>"code/methods.go"} --></p>
+
+<pre class='code'>
+<pre class="all_hallows_eve">  <span class="Keyword">if</span> <span class="SourceBase"><span class="SourceBase">text, err <span class="Keyword">:=</span></span></span><span class="SourceBase"><span class="SourceBase"> </span><span class="SupportFunction">readFile</span>(</span><span class="String"><span class="String">'</span>foo.txt<span class="String">'</span></span>); err == <span class="Constant">nil</span> <span class="SourceBase">{</span>
+<span class="SourceBase">    <span class="Comment"><span class="Comment">//</span> Read the file</span></span>
+<span class="SourceBase">  }</span> <span class="Keyword">else</span> <span class="SourceBase">{</span>
+<span class="SourceBase">    <span class="Comment"><span class="Comment">//</span> Handle the error</span></span>
+<span class="SourceBase">  }</span>
+
+  <span class="Keyword">for</span> <span class="SourceBase"><span class="SourceBase">key, value <span class="Keyword">:=</span></span></span> <span class="Keyword">range</span> my_map <span class="SourceBase">{</span>
+<span class="SourceBase"></span>
+<span class="SourceBase">  }</span>
+</pre></pre>
+
+<div class="codeurl">code/methods.go</div>
+
+<p><!-- end code --></p>
+
+
+
+</div><div class='slide'>
+
+<h1>Named Results</h1>
+
+<p>[TODO]</p>
+
 
 
 </div><div class='slide'>
@@ -328,6 +398,12 @@ puts this is terrible code
 </div><div class='slide'>
 
 <h1>Channels</h1>
+
+<ul>
+<li>Like Unix pipes</li>
+<li>Communicate across goroutines</li>
+<li>Optionally blocking/non-blocking</li>
+</ul>
 
 
 
