@@ -107,22 +107,26 @@ make()
 - Garbage collected
 - Arrays aren't pointers
 
-# Methods
+# Functions
 - CamelCase - public
 - camelCase - package-level
 - Pass by value
 - Multiple return values
 
 # What? Multiple Return Values?!
-<%= code 'code/methods.go#multiple_return', :lang => 'go' %>
+<%= code 'code/functions.go#multiple_return', :lang => 'go' %>
 How do we access them?
-<%= code 'code/methods.go#call_gimme_five', :lang => 'go' %>
+<%= code 'code/functions.go#call_gimme_five', :lang => 'go' %>
 
 # Why Multiple Return Values?
-<%= code 'code/methods.go#why_multiple', :lang => 'go' %>
+<%= code 'code/functions.go#why_multiple', :lang => 'go' %>
 
 # Named Results
-<%= code 'code/methods.go#named_results', :lang => 'go' %>
+<%= code 'code/functions.go#named_results', :lang => 'go' %>
+
+# Methods
+Write functions that operate on particular data
+<%= code 'code/functions.go#method', :lang => 'go' %>
 
 # Concurrency
 <img src='images/sheldon.png' />
@@ -161,3 +165,9 @@ How do we access them?
 <%= code 'code/concurrency.go#thread_join', :lang => 'go' %>
 
 # Interfaces
+- Similar to Java
+- Definition of acceptable types
+- Types don't "implement" anything
+
+# Interfaces
+<%= code 'code/interfaces.go#interface', :lang => 'go' %>
