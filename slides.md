@@ -28,13 +28,23 @@ Like C
 # We Already Have Fun Languages!
 <%= code 'code/ruby.rb' %>
 
-# It Runs on Linux and OS X!
+# Fun Languages are Slow at Runtime
+<img src='images/benchmarks.png'/>
+
+# Fast Languages are Slow to Compile
+<img src='images/xkcd_compiling.png'/>
+
+# Alternative: Go
+<s>Go is slow at runtime AND at compile time!</s>
+
+# It Runs on Linux 
 <img src='images/linux.jpg'/>
+
+# It Runs on OS X!
 <img src='images/snow_leopard.jpg'/>
 
-# And Also...
+# It Runs on Virtual Machines!
 <img src='images/vmware.jpg'/>
-<img src='images/virtualbox.png'/>
 
 # Specifications
 
