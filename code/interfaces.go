@@ -17,11 +17,9 @@ func (d Duck) WinAtLife() {} // We can pass this an int
 //#START:interface_embedding
 type Spider interface {
   CreateWebs()
-  ClimbWalls()
 }
 
 type Man interface {
-  TakePhotos()
   MissUncleBen()
 }
 
@@ -29,16 +27,16 @@ type SpiderMan interface {
   Spider
   Man
 }
+
+func (m SpiderMan) FightGreenGoblin() {} // Target must CreateWebs() and MissUncleBen()
 //#END:interface_embedding
 
 //#START:struct_embedding
 struct Spider interface {
   CreateWebs()
-  ClimbWalls()
 }
 
 struct Man interface {
-  TakePhotos()
   MissUncleBen()
 }
 
