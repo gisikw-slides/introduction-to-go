@@ -46,8 +46,7 @@ Pointers
 - [TODO]
 
 Arrays
-- NOT pointers
-- Referenced via slices
+<%= code 'code/variables.go#arrays', :lang => 'go' %>
 
 # Variables: Slices and Maps 
 Slices
@@ -60,14 +59,17 @@ Maps
 <%= code 'code/variables.go#declarations', :lang => "go" %>
 
 # Go &#8800; C
-- Semicolons optional
+- Semicolons optional (implied)
+- Curly braces MUST start on the same line
 - No parentheses in <code>if</code>s and <code>for</code>s
 - Garbage collected
-- [TODO]
+- Arrays aren't pointers
 
 # Methods
 - Pass by value
 - Multiple return values
+
+# What? Multiple Return Values?!
 
 # Concurrency
 <img src='images/sheldon.png' />
@@ -78,3 +80,9 @@ Maps
 - Communication over shared memory
 
 # Channels
+
+# Threading
+
+# Networking
+
+# Interfaces
