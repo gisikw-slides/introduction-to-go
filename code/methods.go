@@ -20,6 +20,11 @@ func main() {
   for key, value := range my_map {
 
   }
+  
+  // ...or
+  for _, value := range my_map { // Discard the first returned value
+
+  }
   //#END:why_multiple
 
   fmt.Println(x,message)
@@ -35,3 +40,11 @@ func readFile(name string) (out string, err string) {
   out = "File read"
   return
 }
+
+//#START:named_results
+func gimmeSix() (value int, err string) {
+  // value and err are set to nil
+  value = 5
+  return // implicitly returns 5, niln
+}
+//#END:named_results
