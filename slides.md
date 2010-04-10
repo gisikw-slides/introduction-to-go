@@ -202,7 +202,7 @@ Help develop libraries you want to see!
 # Additional Information
 - <a href='http://golang.org'>http://golang.org</a>
 - <a href='http://code.google.com/p/go/wiki/WikiIndex'>Go Wiki</a>
-- <a href="http://www.youtube.com/watch?v=rKnDgT73v8s'>Google Tech Talk</a>
+- <a href='http://www.youtube.com/watch?v=rKnDgT73v8s'>Google Tech Talk</a>
 
 # Questions? Comments?
 <img src='images/go_board.jpg'/>
