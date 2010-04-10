@@ -1,0 +1,11 @@
+--2010-04-09 23:07:53--  http://www.geeky-gadgets.com/wp-content/uploads/2009/08/mac-os-x-snow-leopard.jpg
+Resolving www.geeky-gadgets.com... 174.143.161.202
+Connecting to www.geeky-gadgets.com|174.143.161.202|:80... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 40860 (40K) [image/jpeg]
+Saving to: `mac-os-x-snow-leopard.jpg'
+
+     0K .......... .......... .......... .........            100%  259K=0.2s
+
+2010-04-09 23:07:53 (259 KB/s) - `mac-os-x-snow-leopard.jpg' saved [40860/40860]
+

@@ -1,0 +1,15 @@
+--2010-04-09 23:06:08--  http://www.disco-tech.org/Linux%20tux-large.jpg
+Resolving www.disco-tech.org... 64.246.188.3
+Connecting to www.disco-tech.org|64.246.188.3|:80... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 213321 (208K) [image/jpeg]
+Saving to: `Linux tux-large.jpg'
+
+     0K .......... .......... .......... .......... .......... 24%  202K 1s
+    50K .......... .......... .......... .......... .......... 48%  309K 0s
+   100K .......... .......... .......... .......... .......... 72%  607K 0s
+   150K .......... .......... .......... .......... .......... 96% 5.34M 0s
+   200K ........                                              100% 8.25M=0.5s
+
+2010-04-09 23:06:09 (415 KB/s) - `Linux tux-large.jpg' saved [213321/213321]
+

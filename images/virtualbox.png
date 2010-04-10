@@ -1,0 +1,15 @@
+--2010-04-09 23:10:26--  http://blog.subaquatic.net/wp-content/uploads/2008/12/virtualbox.png
+Resolving blog.subaquatic.net... 168.103.86.64
+Connecting to blog.subaquatic.net|168.103.86.64|:80... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 205380 (201K) [image/png]
+Saving to: `virtualbox.png.1'
+
+     0K .......... .......... .......... .......... .......... 24% 85.4K 2s
+    50K .......... .......... .......... .......... .......... 49% 90.4K 1s
+   100K .......... .......... .......... .......... .......... 74% 90.5K 1s
+   150K .......... .......... .......... .......... .......... 99% 92.6K 0s
+   200K                                                       100%  193K=2.2s
+
+2010-04-09 23:10:28 (89.8 KB/s) - `virtualbox.png.1' saved [205380/205380]
+

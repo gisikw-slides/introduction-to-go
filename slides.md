@@ -13,6 +13,9 @@ code-line-numbers: false
 
 Go is a brand-spanking-new systems language that Google released in November, 2009. Every wonder how awesome C would be if it was garbage-collected, concurrent, and didn't take a few weeks to compile? Wake up; it's here! We'll take a look at this new language that steals some of the dynamic flexibility of Python and Ruby, the performance of C, and a compile time that you'll miss if you blink.
 
+# Hello, world
+<%= code 'code/hello_world.go', :lang => "go" %>
+
 # Why Go?
 
 - It's a systems language
@@ -25,8 +28,13 @@ Like C
 # We Already Have Fun Languages!
 <%= code 'code/ruby.rb' %>
 
-# Hello, world
-<%= code 'code/hello_world.go', :lang => "go" %>
+# It Runs on Linux and OS X!
+<img src='images/linux.jpg'/>
+<img src='images/snow_leopard'/>
+
+# And Also...
+<img src='vmware.jpg'/>
+<img src='virtualbox.png'/>
 
 # Specifications
 
