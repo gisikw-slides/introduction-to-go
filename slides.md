@@ -77,7 +77,9 @@ Arrays
 
 # Variables: Slices and Maps 
 Slices
-[TODO]
+- "Pointers" for arrays
+- Contains pointers to each object in a range of the array
+- Used for passing array values by reference
 
 Maps
 <%= code 'code/variables.go#maps', :lang => 'go' %>
@@ -85,6 +87,19 @@ Maps
 # Variable Declaration
 
 <%= code 'code/variables.go#declarations', :lang => "go" %>
+
+# Variable Allocation
+new()
+- allocates heap space
+- zero-initializes the space
+- returns the address
+- used for ints, floats, structs
+
+make()
+- allocates heap space
+- creates the object (and underlying data structure)
+- returns the value
+- used for maps, channels, slices
 
 # Go &#8800; C
 - Semicolons optional (implied)
@@ -94,6 +109,8 @@ Maps
 - Arrays aren't pointers
 
 # Methods
+- CamelCase - public
+- camelCase - package-level
 - Pass by value
 - Multiple return values
 
@@ -106,7 +123,7 @@ How do we access them?
 <%= code 'code/methods.go#why_multiple', :lang => 'go' %>
 
 # Named Results
-[TODO]
+<%= code 'code/methods.go#named_results', :lang => 'go' %>
 
 # Concurrency
 <img src='images/sheldon.png' />
@@ -116,13 +133,23 @@ How do we access them?
 - Independent code
 - Communication over shared memory
 
+# Threads
+- Exist
+- Span across multiple cores
+- Go load-balances them
+- Don't worry about it
+
+# Goroutine Example
+<%= code 'code/concurrency.go#goroutines' :lang => 'go' %>
+- No access to spawned goroutines
+- No thread.join equivalent
+
 # Channels
 - Like Unix pipes
 - Communicate across goroutines
 - Optionally blocking/non-blocking
 
-# Threading
-
-# Networking
+# Channel Example
+<%= code 'code/concurrency.go#channels' :lane => 'go' %>
 
 # Interfaces
