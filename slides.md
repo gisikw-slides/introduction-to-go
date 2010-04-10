@@ -37,6 +37,14 @@ Like C
 # Alternative: Go
 <s>Go is slow at runtime AND at compile time!</s>
 
+- 1/2&mdash;1/3 LOC for C++ benchmarks
+- 1&mdash;1/16 of the speed (libraries?)
+
+Priorities:
+- Compile time
+- Performance
+- Readability
+
 # It Runs on Linux 
 <img src='images/linux.jpg'/>
 
@@ -61,13 +69,15 @@ Like C
 
 # Variables: Pointers and Arrays
 Pointers
-- [TODO]
+- Use them for reference
+- DON'T manipulate them!
 
 Arrays
 <%= code 'code/variables.go#arrays', :lang => 'go' %>
 
 # Variables: Slices and Maps 
 Slices
+[TODO]
 
 Maps
 <%= code 'code/variables.go#maps', :lang => 'go' %>
@@ -88,6 +98,15 @@ Maps
 - Multiple return values
 
 # What? Multiple Return Values?!
+<%= code 'code/methods.go#multiple_return', :lang => 'go' %>
+How do we access them?
+<%= code 'code/methods.go#call_gimme_five', :lang => 'go' %>
+
+# Why Multiple Return Values?
+<%= code 'code/methods.go#why_multiple', :lang => 'go' %>
+
+# Named Results
+[TODO]
 
 # Concurrency
 <img src='images/sheldon.png' />
@@ -98,6 +117,9 @@ Maps
 - Communication over shared memory
 
 # Channels
+- Like Unix pipes
+- Communicate across goroutines
+- Optionally blocking/non-blocking
 
 # Threading
 
