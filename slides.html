@@ -126,6 +126,9 @@
 <span class="Keyword">end</span>
 
 puts this is terrible code
+
+x <span class="Keyword">=</span> <span class="SourceBase">[</span><span class="Constant">1</span><span class="SourceBase">,</span><span class="Constant">2</span><span class="SourceBase">,</span><span class="Constant">3</span><span class="SourceBase">]</span>
+<span class="SourceBase"><span class="FunctionName">eval</span></span><span class="SourceBase">(</span>x<span class="SourceBase"><span class="SourceBase">.</span><span class="FunctionName">join</span></span><span class="SourceBase">(</span><span class="String"><span class="String">'</span>+<span class="String">'</span></span><span class="SourceBase">)</span><span class="SourceBase">)</span>
 </pre></pre>
 
 <div class="codeurl">code/ruby.rb</div>
@@ -217,6 +220,7 @@ puts this is terrible code
 <li>int8, int32, float64</li>
 <li>uint, ufloat</li>
 <li>string</li>
+<li>struct</li>
 </ul>
 
 
@@ -411,7 +415,7 @@ puts this is terrible code
 <pre class="all_hallows_eve"><span class="SourceBase"><span class="Keyword">func</span> <span class="FunctionName">gimmeSix</span>() (<span class="SourceBase">value int, err string</span>) <span class="SourceBase">{</span></span>
 <span class="SourceBase"><span class="SourceBase">  <span class="Comment"><span class="Comment">//</span> value and err are set to nil</span></span></span>
 <span class="SourceBase"><span class="SourceBase">  value = <span class="Constant">5</span></span></span>
-<span class="SourceBase"><span class="SourceBase">  <span class="Keyword">return</span> <span class="Comment"><span class="Comment">//</span> implicitly returns 5, niln</span></span></span>
+<span class="SourceBase"><span class="SourceBase">  <span class="Keyword">return</span> <span class="Comment"><span class="Comment">//</span> implicitly returns 5, nil</span></span></span>
 <span class="SourceBase"><span class="SourceBase">}</span></span>
 </pre></pre>
 
