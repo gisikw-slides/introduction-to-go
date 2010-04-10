@@ -1,5 +1,8 @@
 package main
 
+import "time"
+import "fmt"
+
 func main() {
   //#START:goroutines
   go gimmeFive()
@@ -21,7 +24,7 @@ func chat() {
   output := make(chan string)
   go log(output)
   for true {
-    input <- "Hey. Hey. Listen"
+    output <- "Hey. Hey. Listen"
   }
 }
 
@@ -45,9 +48,9 @@ func client(input chan int) {
 
 //#START:asynchronous_channels
 func chatter(){
-  output := make(chan string 10)
+  output := make(chan string, 10)
   go log(output)
-  input <- "Hey. Hey. Listen"
+  output <- "Hey. Hey. Listen"
   // Chatter terminates almost immediately
 }
 //#END:asynchronous_channels
@@ -61,3 +64,6 @@ func spawner(){
   <- gui_dead
 }
 //#END:thread_join
+
+func gui(){
+}

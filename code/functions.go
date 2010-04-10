@@ -6,6 +6,14 @@ func main() {
 
   my_map := map[string] string{}
 
+  //#START:method
+  type Mongoose int
+
+  func (m Mongoose) Pluck() string {
+    return "The mongoose was plucked"
+  }
+  //#END:method
+
   //#START:call_gimme_five
   x, message := gimmeFive()
   //#END:call_gimme_five
