@@ -162,6 +162,7 @@ Write functions that operate on particular data
 - No thread.join equivalent
 
 # Channels
+<img src='images/the_lake_house.jpg'/>
 - Like Unix pipes
 - Communicate across goroutines
 - Optionally blocking/non-blocking
@@ -177,3 +178,36 @@ Write functions that operate on particular data
 
 # Channel Example: Thread.join
 <%= code 'code/concurrency.go#thread_join', :lang => 'go' %>
+
+# Packages and Libraries
+- os
+- net
+- websocket
+- math
+- strings
+- bufio
+- encoding
+- json
+- testing
+- regexp
+
+# What Should You Use It For?
+- Not yet ready for production use
+- Systems work
+- High performance
+- Fun!
+
+Help develop libraries you want to see!
+
+# Additional Information
+- <a href='http://golang.org'>http://golang.org</a>
+- <a href='http://code.google.com/p/go/wiki/WikiIndex'>Go Wiki</a>
+- <a href="http://www.youtube.com/watch?v=rKnDgT73v8s'>Google Tech Talk</a>
+
+# Questions? Comments?
+<img src='images/go_board.jpg'/>
+Thank you!
+
+Kevin W. Gisi
+
+&lt;<a href='mailto:kevin@kevingisi.com'>kevin@kevingisi.com</a>&gt;
