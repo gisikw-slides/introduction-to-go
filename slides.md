@@ -93,13 +93,11 @@ new()
 - allocates heap space
 - zero-initializes the space
 - returns the address
-- used for ints, floats, structs
 
 make()
 - allocates heap space
 - creates the object (and underlying data structure)
 - returns the value
-- used for maps, channels, slices
 
 # Go &#8800; C
 - Semicolons optional (implied)
