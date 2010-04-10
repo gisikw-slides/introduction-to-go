@@ -336,7 +336,7 @@ x <span class="Keyword">=</span> <span class="SourceBase">[</span><span class="C
 
 </div><div class='slide'>
 
-<h1>Methods</h1>
+<h1>Functions</h1>
 
 <ul>
 <li>CamelCase - public</li>
@@ -351,7 +351,7 @@ x <span class="Keyword">=</span> <span class="SourceBase">[</span><span class="C
 
 <h1>What? Multiple Return Values?!</h1>
 
-<p><!-- begin code{:part=>"multiple_return", :lang=>"go", :name=>"code/methods.go"} --></p>
+<p><!-- begin code{:part=>"multiple_return", :lang=>"go", :name=>"code/functions.go"} --></p>
 
 <pre class='code'>
 <pre class="all_hallows_eve"><span class="SourceBase"><span class="Keyword">func</span> <span class="FunctionName">gimmeFive</span>() (<span class="SourceBase">int, string</span>) <span class="SourceBase">{</span></span>
@@ -359,18 +359,18 @@ x <span class="Keyword">=</span> <span class="SourceBase">[</span><span class="C
 <span class="SourceBase"><span class="SourceBase">}</span></span>
 </pre></pre>
 
-<div class="codeurl">code/methods.go</div>
+<div class="codeurl">code/functions.go</div>
 
 <p><!-- end code --></p>
 
 <p>How do we access them?
-<!-- begin code{:part=>"call_gimme_five", :lang=>"go", :name=>"code/methods.go"} --></p>
+<!-- begin code{:part=>"call_gimme_five", :lang=>"go", :name=>"code/functions.go"} --></p>
 
 <pre class='code'>
 <pre class="all_hallows_eve">  <span class="SourceBase"><span class="SourceBase">x, message <span class="Keyword">:=</span></span></span><span class="SourceBase"><span class="SourceBase"> </span><span class="SupportFunction">gimmeFive</span>(</span>)
 </pre></pre>
 
-<div class="codeurl">code/methods.go</div>
+<div class="codeurl">code/functions.go</div>
 
 <p><!-- end code --></p>
 
@@ -380,7 +380,7 @@ x <span class="Keyword">=</span> <span class="SourceBase">[</span><span class="C
 
 <h1>Why Multiple Return Values?</h1>
 
-<p><!-- begin code{:part=>"why_multiple", :lang=>"go", :name=>"code/methods.go"} --></p>
+<p><!-- begin code{:part=>"why_multiple", :lang=>"go", :name=>"code/functions.go"} --></p>
 
 <pre class='code'>
 <pre class="all_hallows_eve">  <span class="Keyword">if</span> <span class="SourceBase"><span class="SourceBase">text, err <span class="Keyword">:=</span></span></span><span class="SourceBase"><span class="SourceBase"> </span><span class="SupportFunction">readFile</span>(</span><span class="String"><span class="String">'</span>foo.txt<span class="String">'</span></span>); err == <span class="Constant">nil</span> <span class="SourceBase">{</span>
@@ -399,7 +399,7 @@ x <span class="Keyword">=</span> <span class="SourceBase">[</span><span class="C
 <span class="SourceBase">  }</span>
 </pre></pre>
 
-<div class="codeurl">code/methods.go</div>
+<div class="codeurl">code/functions.go</div>
 
 <p><!-- end code --></p>
 
@@ -409,7 +409,7 @@ x <span class="Keyword">=</span> <span class="SourceBase">[</span><span class="C
 
 <h1>Named Results</h1>
 
-<p><!-- begin code{:part=>"named_results", :lang=>"go", :name=>"code/methods.go"} --></p>
+<p><!-- begin code{:part=>"named_results", :lang=>"go", :name=>"code/functions.go"} --></p>
 
 <pre class='code'>
 <pre class="all_hallows_eve"><span class="SourceBase"><span class="Keyword">func</span> <span class="FunctionName">gimmeSix</span>() (<span class="SourceBase">value int, err string</span>) <span class="SourceBase">{</span></span>
@@ -419,7 +419,28 @@ x <span class="Keyword">=</span> <span class="SourceBase">[</span><span class="C
 <span class="SourceBase"><span class="SourceBase">}</span></span>
 </pre></pre>
 
-<div class="codeurl">code/methods.go</div>
+<div class="codeurl">code/functions.go</div>
+
+<p><!-- end code --></p>
+
+
+
+</div><div class='slide'>
+
+<h1>Methods</h1>
+
+<p>Write functions that operate on particular data
+<!-- begin code{:part=>"method", :lang=>"go", :name=>"code/functions.go"} --></p>
+
+<pre class='code'>
+<pre class="all_hallows_eve">  <span class="Keyword">type</span> <span class="SourceBase">Mongoose</span> <span class="SourceBase">int</span>
+
+<span class="SourceBase">  <span class="Keyword">func</span> (<span class="FunctionArgument">m Mongoose</span>) <span class="SourceBase">Pluck</span>() string <span class="SourceBase">{</span></span>
+<span class="SourceBase"><span class="SourceBase">    <span class="Keyword">return</span> <span class="String"><span class="String">&quot;</span>The mongoose was plucked<span class="String">&quot;</span></span></span></span>
+<span class="SourceBase"><span class="SourceBase">  }</span></span>
+</pre></pre>
+
+<div class="codeurl">code/functions.go</div>
 
 <p><!-- end code --></p>
 
@@ -507,7 +528,7 @@ x <span class="Keyword">=</span> <span class="SourceBase">[</span><span class="C
 <span class="SourceBase"><span class="SourceBase">  <span class="SourceBase"><span class="SourceBase">output <span class="Keyword">:=</span></span></span><span class="SourceBase"> </span><span class="SupportFunction">make</span><span class="SourceBase">(<span class="SourceBase">chan</span> <span class="SourceBase">string</span>)</span></span></span>
 <span class="SourceBase"><span class="SourceBase">  <span class="Keyword">go</span> <span class="SourceBase"><span class="SupportFunction">log</span>(</span>output)</span></span>
 <span class="SourceBase"><span class="SourceBase">  <span class="Keyword">for</span> <span class="Constant">true</span> <span class="SourceBase">{</span></span></span>
-<span class="SourceBase"><span class="SourceBase"><span class="SourceBase">    input <span class="SourceBase">&lt;-</span> <span class="String"><span class="String">&quot;</span>Hey. Hey. Listen<span class="String">&quot;</span></span></span></span></span>
+<span class="SourceBase"><span class="SourceBase"><span class="SourceBase">    output <span class="SourceBase">&lt;-</span> <span class="String"><span class="String">&quot;</span>Hey. Hey. Listen<span class="String">&quot;</span></span></span></span></span>
 <span class="SourceBase"><span class="SourceBase"><span class="SourceBase">  }</span></span></span>
 <span class="SourceBase"><span class="SourceBase">}</span></span>
 
@@ -533,9 +554,9 @@ x <span class="Keyword">=</span> <span class="SourceBase">[</span><span class="C
 
 <pre class='code'>
 <pre class="all_hallows_eve"><span class="SourceBase"><span class="Keyword">func</span> <span class="FunctionName">chatter</span>()<span class="SourceBase">{</span></span>
-<span class="SourceBase"><span class="SourceBase">  <span class="SourceBase"><span class="SourceBase">output <span class="Keyword">:=</span></span></span><span class="SourceBase"> </span><span class="SupportFunction">make</span><span class="SourceBase">(<span class="SourceBase">chan</span> <span class="SourceBase">string</span> <span class="Constant">10</span>)</span></span></span>
+<span class="SourceBase"><span class="SourceBase">  <span class="SourceBase"><span class="SourceBase">output <span class="Keyword">:=</span></span></span><span class="SourceBase"> </span><span class="SupportFunction">make</span><span class="SourceBase">(<span class="SourceBase">chan</span> <span class="SourceBase">string</span>, <span class="Constant">10</span>)</span></span></span>
 <span class="SourceBase"><span class="SourceBase">  <span class="Keyword">go</span> <span class="SourceBase"><span class="SupportFunction">log</span>(</span>output)</span></span>
-<span class="SourceBase"><span class="SourceBase">  input <span class="SourceBase">&lt;-</span> <span class="String"><span class="String">&quot;</span>Hey. Hey. Listen<span class="String">&quot;</span></span></span></span>
+<span class="SourceBase"><span class="SourceBase">  output <span class="SourceBase">&lt;-</span> <span class="String"><span class="String">&quot;</span>Hey. Hey. Listen<span class="String">&quot;</span></span></span></span>
 <span class="SourceBase"><span class="SourceBase">  <span class="Comment"><span class="Comment">//</span> Chatter terminates almost immediately</span></span></span>
 <span class="SourceBase"><span class="SourceBase">}</span></span>
 </pre></pre>
@@ -593,6 +614,38 @@ x <span class="Keyword">=</span> <span class="SourceBase">[</span><span class="C
 </div><div class='slide'>
 
 <h1>Interfaces</h1>
+
+<ul>
+<li>Similar to Java</li>
+<li>Definition of acceptable types</li>
+<li>Types don't "implement" anything</li>
+</ul>
+
+
+
+</div><div class='slide'>
+
+<h1>Interfaces</h1>
+
+<p><!-- begin code{:part=>"interface", :lang=>"go", :name=>"code/interfaces.go"} --></p>
+
+<pre class='code'>
+<pre class="all_hallows_eve"><span class="Keyword">type</span> <span class="SourceBase">Duck</span> <span class="Keyword">interface</span> <span class="SourceBase">{</span>
+<span class="SourceBase"><span class="SourceBase"><span class="SourceBase">  </span><span class="SupportFunction">Quack</span>(</span>)</span>
+<span class="SourceBase"><span class="SourceBase"><span class="SourceBase">  </span><span class="SupportFunction">Waddle</span>(</span>)</span>
+<span class="SourceBase"><span class="SourceBase"><span class="SourceBase">  </span><span class="SupportFunction">Swim</span>(</span>)</span>
+<span class="SourceBase">}</span>
+
+<span class="SourceBase"><span class="Keyword">func</span> (<span class="SourceBase">i int</span>) <span class="FunctionName">Quack</span>() <span class="SourceBase">{}</span></span>
+<span class="SourceBase"><span class="Keyword">func</span> (<span class="SourceBase">i int</span>) <span class="FunctionName">Waddle</span>() <span class="SourceBase">{}</span></span>
+<span class="SourceBase"><span class="Keyword">func</span> (<span class="SourceBase">i int</span>) <span class="FunctionName">Swim</span>() <span class="SourceBase">{}</span></span>
+
+<span class="SourceBase"><span class="Keyword">func</span> (<span class="SourceBase">d Duck</span>) <span class="FunctionName">WinAtLife</span>() <span class="SourceBase">{}</span></span> <span class="Comment"><span class="Comment">//</span> We can pass this an int</span>
+</pre></pre>
+
+<div class="codeurl">code/interfaces.go</div>
+
+<p><!-- end code --></p>
 
 </div></div>
 
