@@ -249,8 +249,13 @@ puts this is terrible code
 
 <h1>Variables: Slices and Maps</h1>
 
-<p>Slices
-[TODO]</p>
+<p>Slices</p>
+
+<ul>
+<li>"Pointers" for arrays</li>
+<li>Contains pointers to each object in a range of the array</li>
+<li>Used for passing array values by reference</li>
+</ul>
 
 <p>Maps
 <!-- begin code{:part=>"maps", :lang=>"go", :name=>"code/variables.go"} --></p>
@@ -291,6 +296,30 @@ puts this is terrible code
 
 </div><div class='slide'>
 
+<h1>Variable Allocation</h1>
+
+<p>new()</p>
+
+<ul>
+<li>allocates heap space</li>
+<li>zero-initializes the space</li>
+<li>returns the address</li>
+<li>used for ints, floats, structs</li>
+</ul>
+
+<p>make()</p>
+
+<ul>
+<li>allocates heap space</li>
+<li>creates the object (and underlying data structure)</li>
+<li>returns the value</li>
+<li>used for maps, channels, slices</li>
+</ul>
+
+
+
+</div><div class='slide'>
+
 <h1>Go &#8800; C</h1>
 
 <ul>
@@ -308,6 +337,8 @@ puts this is terrible code
 <h1>Methods</h1>
 
 <ul>
+<li>CamelCase - public</li>
+<li>camelCase - package-level</li>
 <li>Pass by value</li>
 <li>Multiple return values</li>
 </ul>
@@ -359,6 +390,11 @@ puts this is terrible code
   <span class="Keyword">for</span> <span class="SourceBase"><span class="SourceBase">key, value <span class="Keyword">:=</span></span></span> <span class="Keyword">range</span> my_map <span class="SourceBase">{</span>
 <span class="SourceBase"></span>
 <span class="SourceBase">  }</span>
+
+  <span class="Comment"><span class="Comment">//</span> ...or</span>
+  <span class="Keyword">for</span> <span class="SourceBase"><span class="SourceBase">_, value <span class="Keyword">:=</span></span></span> <span class="Keyword">range</span> my_map <span class="SourceBase">{ <span class="Comment"><span class="Comment">//</span> Discard the first returned value</span></span>
+<span class="SourceBase"></span>
+<span class="SourceBase">  }</span>
 </pre></pre>
 
 <div class="codeurl">code/methods.go</div>
@@ -371,7 +407,19 @@ puts this is terrible code
 
 <h1>Named Results</h1>
 
-<p>[TODO]</p>
+<p><!-- begin code{:part=>"named_results", :lang=>"go", :name=>"code/methods.go"} --></p>
+
+<pre class='code'>
+<pre class="all_hallows_eve"><span class="SourceBase"><span class="Keyword">func</span> <span class="FunctionName">gimmeSix</span>() (<span class="SourceBase">value int, err string</span>) <span class="SourceBase">{</span></span>
+<span class="SourceBase"><span class="SourceBase">  <span class="Comment"><span class="Comment">//</span> value and err are set to nil</span></span></span>
+<span class="SourceBase"><span class="SourceBase">  value = <span class="Constant">5</span></span></span>
+<span class="SourceBase"><span class="SourceBase">  <span class="Keyword">return</span> <span class="Comment"><span class="Comment">//</span> implicitly returns 5, niln</span></span></span>
+<span class="SourceBase"><span class="SourceBase">}</span></span>
+</pre></pre>
+
+<div class="codeurl">code/methods.go</div>
+
+<p><!-- end code --></p>
 
 
 
@@ -397,6 +445,45 @@ puts this is terrible code
 
 </div><div class='slide'>
 
+<h1>Threads</h1>
+
+<ul>
+<li>Exist</li>
+<li>Span across multiple cores</li>
+<li>Go load-balances them</li>
+<li>Don't worry about it</li>
+</ul>
+
+
+
+</div><div class='slide'>
+
+<h1>Goroutine Example</h1>
+
+<p><!-- begin code{:part=>"goroutines", :lang=>"go", :name=>"code/concurrency.go"} --></p>
+
+<pre class='code'>
+<pre class="all_hallows_eve">  <span class="Keyword">go</span> <span class="SourceBase"><span class="SupportFunction">gimmeFive</span>(</span>)
+
+  <span class="Keyword">go</span> <span class="Keyword">func</span><span class="SourceBase">(<span class="SourceBase">)</span></span> <span class="SourceBase">{</span>
+<span class="SourceBase">    time.<span class="SourceBase"><span class="SupportFunction">Sleep</span>(</span><span class="Constant">5</span>)</span>
+<span class="SourceBase">    fmt.<span class="SourceBase"><span class="SupportFunction">Println</span>(</span><span class="String"><span class="String">&quot;</span>Computer over. Virus = very yes<span class="String">&quot;</span></span>)</span>
+<span class="SourceBase">  }</span><span class="SourceBase">(<span class="SourceBase">)</span></span>
+</pre></pre>
+
+<div class="codeurl">code/concurrency.go</div>
+
+<p><!-- end code --></p>
+
+<ul>
+<li>No access to spawned goroutines</li>
+<li>No thread.join equivalent</li>
+</ul>
+
+
+
+</div><div class='slide'>
+
 <h1>Channels</h1>
 
 <ul>
@@ -409,13 +496,30 @@ puts this is terrible code
 
 </div><div class='slide'>
 
-<h1>Threading</h1>
+<h1>Channel Example</h1>
 
+<p><!-- begin code{:part=>"channels", :lang=>"go", :name=>"code/concurrency.go"} --></p>
 
+<pre class='code'>
+<pre class="all_hallows_eve"><span class="SourceBase"><span class="Keyword">func</span> <span class="FunctionName">chat</span>() <span class="SourceBase">{</span></span>
+<span class="SourceBase"><span class="SourceBase">  <span class="SourceBase"><span class="SourceBase">output <span class="Keyword">:=</span></span></span><span class="SourceBase"> </span><span class="SupportFunction">make</span><span class="SourceBase">(<span class="SourceBase">chan</span> <span class="SourceBase">string</span>)</span></span></span>
+<span class="SourceBase"><span class="SourceBase">  <span class="Keyword">go</span> <span class="SourceBase"><span class="SupportFunction">log</span>(</span>output)</span></span>
+<span class="SourceBase"><span class="SourceBase">  <span class="Keyword">for</span> <span class="Constant">true</span> <span class="SourceBase">{</span></span></span>
+<span class="SourceBase"><span class="SourceBase"><span class="SourceBase">    input <span class="SourceBase">&lt;-</span> <span class="String"><span class="String">&quot;</span>Hey. Hey. Listen<span class="String">&quot;</span></span></span></span></span>
+<span class="SourceBase"><span class="SourceBase"><span class="SourceBase">  }</span></span></span>
+<span class="SourceBase"><span class="SourceBase">}</span></span>
 
-</div><div class='slide'>
+<span class="SourceBase"><span class="Keyword">func</span> <span class="FunctionName">log</span>(<span class="FunctionArgument">input chan string</span>)<span class="SourceBase">{</span></span>
+<span class="SourceBase"><span class="SourceBase">  <span class="Keyword">for</span> <span class="Constant">true</span> <span class="SourceBase">{</span></span></span>
+<span class="SourceBase"><span class="SourceBase"><span class="SourceBase">    <span class="SourceBase"><span class="SourceBase">data <span class="Keyword">:=</span></span></span> <span class="SourceBase">&lt;-</span> input</span></span></span>
+<span class="SourceBase"><span class="SourceBase"><span class="SourceBase">    fmt.<span class="SourceBase"><span class="SupportFunction">Println</span>(</span>data)</span></span></span>
+<span class="SourceBase"><span class="SourceBase"><span class="SourceBase">  }</span></span></span>
+<span class="SourceBase"><span class="SourceBase">}</span></span>
+</pre></pre>
 
-<h1>Networking</h1>
+<div class="codeurl">code/concurrency.go</div>
+
+<p><!-- end code --></p>
 
 
 
