@@ -128,6 +128,20 @@ How do we access them?
 Write functions that operate on particular data
 <%= code 'code/functions.go#method', :lang => 'go' %>
 
+# Interfaces
+- Similar to Java
+- Definition of acceptable types
+- Types don't "implement" anything
+
+# Interfaces
+<%= code 'code/interfaces.go#interface', :lang => 'go' %>
+
+# Interface Embedding
+<%= code 'code/interfaces.go#interface_embedding', :lang => 'go' %>
+
+# Struct Embedding
+<%= code 'code/interfaces.go#struct_embedding', :lang => 'go' %>
+
 # Concurrency
 <img src='images/sheldon.png' />
 
@@ -163,11 +177,3 @@ Write functions that operate on particular data
 
 # Channel Example: Thread.join
 <%= code 'code/concurrency.go#thread_join', :lang => 'go' %>
-
-# Interfaces
-- Similar to Java
-- Definition of acceptable types
-- Types don't "implement" anything
-
-# Interfaces
-<%= code 'code/interfaces.go#interface', :lang => 'go' %>
