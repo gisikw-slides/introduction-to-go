@@ -448,6 +448,104 @@ x <span class="Keyword">=</span> <span class="SourceBase">[</span><span class="C
 
 </div><div class='slide'>
 
+<h1>Interfaces</h1>
+
+<ul>
+<li>Similar to Java</li>
+<li>Definition of acceptable types</li>
+<li>Types don't "implement" anything</li>
+</ul>
+
+
+
+</div><div class='slide'>
+
+<h1>Interfaces</h1>
+
+<p><!-- begin code{:part=>"interface", :lang=>"go", :name=>"code/interfaces.go"} --></p>
+
+<pre class='code'>
+<pre class="all_hallows_eve"><span class="Keyword">type</span> <span class="SourceBase">Duck</span> <span class="Keyword">interface</span> <span class="SourceBase">{</span>
+<span class="SourceBase"><span class="SourceBase"><span class="SourceBase">  </span><span class="SupportFunction">Quack</span>(</span>)</span>
+<span class="SourceBase"><span class="SourceBase"><span class="SourceBase">  </span><span class="SupportFunction">Waddle</span>(</span>)</span>
+<span class="SourceBase"><span class="SourceBase"><span class="SourceBase">  </span><span class="SupportFunction">Swim</span>(</span>)</span>
+<span class="SourceBase">}</span>
+
+<span class="SourceBase"><span class="Keyword">func</span> (<span class="SourceBase">i int</span>) <span class="FunctionName">Quack</span>() <span class="SourceBase">{}</span></span>
+<span class="SourceBase"><span class="Keyword">func</span> (<span class="SourceBase">i int</span>) <span class="FunctionName">Waddle</span>() <span class="SourceBase">{}</span></span>
+<span class="SourceBase"><span class="Keyword">func</span> (<span class="SourceBase">i int</span>) <span class="FunctionName">Swim</span>() <span class="SourceBase">{}</span></span>
+
+<span class="SourceBase"><span class="Keyword">func</span> (<span class="SourceBase">d Duck</span>) <span class="FunctionName">WinAtLife</span>() <span class="SourceBase">{}</span></span> <span class="Comment"><span class="Comment">//</span> We can pass this an int</span>
+</pre></pre>
+
+<div class="codeurl">code/interfaces.go</div>
+
+<p><!-- end code --></p>
+
+
+
+</div><div class='slide'>
+
+<h1>Interface Embedding</h1>
+
+<p><!-- begin code{:part=>"interface_embedding", :lang=>"go", :name=>"code/interfaces.go"} --></p>
+
+<pre class='code'>
+<pre class="all_hallows_eve"><span class="Keyword">type</span> <span class="SourceBase">Spider</span> <span class="Keyword">interface</span> <span class="SourceBase">{</span>
+<span class="SourceBase"><span class="SourceBase"><span class="SourceBase">  </span><span class="SupportFunction">CreateWebs</span>(</span>)</span>
+<span class="SourceBase"><span class="SourceBase"><span class="SourceBase">  </span><span class="SupportFunction">ClimbWalls</span>(</span>)</span>
+<span class="SourceBase">}</span>
+
+<span class="Keyword">type</span> <span class="SourceBase">Man</span> <span class="Keyword">interface</span> <span class="SourceBase">{</span>
+<span class="SourceBase"><span class="SourceBase"><span class="SourceBase">  </span><span class="SupportFunction">TakePhotos</span>(</span>)</span>
+<span class="SourceBase"><span class="SourceBase"><span class="SourceBase">  </span><span class="SupportFunction">MissUncleBen</span>(</span>)</span>
+<span class="SourceBase">}</span>
+
+<span class="Keyword">type</span> <span class="SourceBase">SpiderMan</span> <span class="Keyword">interface</span> <span class="SourceBase">{</span>
+<span class="SourceBase">  <span class="SourceBase">Spider</span></span>
+<span class="SourceBase">  <span class="SourceBase">Man</span></span>
+<span class="SourceBase">}</span>
+</pre></pre>
+
+<div class="codeurl">code/interfaces.go</div>
+
+<p><!-- end code --></p>
+
+
+
+</div><div class='slide'>
+
+<h1>Struct Embedding</h1>
+
+<p><!-- begin code{:part=>"struct_embedding", :lang=>"go", :name=>"code/interfaces.go"} --></p>
+
+<pre class='code'>
+<pre class="all_hallows_eve"><span class="Keyword">struct</span> <span class="SourceBase">Spider</span> <span class="Keyword">interface</span> <span class="SourceBase">{</span>
+<span class="SourceBase"><span class="SourceBase"><span class="SourceBase">  </span><span class="SupportFunction">CreateWebs</span>(</span>)</span>
+<span class="SourceBase"><span class="SourceBase"><span class="SourceBase">  </span><span class="SupportFunction">ClimbWalls</span>(</span>)</span>
+<span class="SourceBase">}</span>
+
+<span class="Keyword">struct</span> <span class="SourceBase">Man</span> <span class="Keyword">interface</span> <span class="SourceBase">{</span>
+<span class="SourceBase"><span class="SourceBase"><span class="SourceBase">  </span><span class="SupportFunction">TakePhotos</span>(</span>)</span>
+<span class="SourceBase"><span class="SourceBase"><span class="SourceBase">  </span><span class="SupportFunction">MissUncleBen</span>(</span>)</span>
+<span class="SourceBase">}</span>
+
+<span class="Keyword">struct</span> <span class="SourceBase">SpiderMan</span> <span class="Keyword">interface</span> <span class="SourceBase">{</span>
+<span class="SourceBase">  <span class="SourceBase">Spider</span></span>
+<span class="SourceBase">  <span class="SourceBase">Man</span></span>
+<span class="SourceBase">}</span>
+
+<span class="SourceBase"><span class="Keyword">func</span> (<span class="SourceBase">m Man</span>) <span class="FunctionName">GetPaid</span>() <span class="SourceBase">{}</span></span> <span class="Comment"><span class="Comment">//</span> Can pass a Man or a SpiderMan</span>
+</pre></pre>
+
+<div class="codeurl">code/interfaces.go</div>
+
+<p><!-- end code --></p>
+
+
+
+</div><div class='slide'>
+
 <h1>Concurrency</h1>
 
 <p><img src='images/sheldon.png' /></p>
@@ -606,44 +704,6 @@ x <span class="Keyword">=</span> <span class="SourceBase">[</span><span class="C
 </pre></pre>
 
 <div class="codeurl">code/concurrency.go</div>
-
-<p><!-- end code --></p>
-
-
-
-</div><div class='slide'>
-
-<h1>Interfaces</h1>
-
-<ul>
-<li>Similar to Java</li>
-<li>Definition of acceptable types</li>
-<li>Types don't "implement" anything</li>
-</ul>
-
-
-
-</div><div class='slide'>
-
-<h1>Interfaces</h1>
-
-<p><!-- begin code{:part=>"interface", :lang=>"go", :name=>"code/interfaces.go"} --></p>
-
-<pre class='code'>
-<pre class="all_hallows_eve"><span class="Keyword">type</span> <span class="SourceBase">Duck</span> <span class="Keyword">interface</span> <span class="SourceBase">{</span>
-<span class="SourceBase"><span class="SourceBase"><span class="SourceBase">  </span><span class="SupportFunction">Quack</span>(</span>)</span>
-<span class="SourceBase"><span class="SourceBase"><span class="SourceBase">  </span><span class="SupportFunction">Waddle</span>(</span>)</span>
-<span class="SourceBase"><span class="SourceBase"><span class="SourceBase">  </span><span class="SupportFunction">Swim</span>(</span>)</span>
-<span class="SourceBase">}</span>
-
-<span class="SourceBase"><span class="Keyword">func</span> (<span class="SourceBase">i int</span>) <span class="FunctionName">Quack</span>() <span class="SourceBase">{}</span></span>
-<span class="SourceBase"><span class="Keyword">func</span> (<span class="SourceBase">i int</span>) <span class="FunctionName">Waddle</span>() <span class="SourceBase">{}</span></span>
-<span class="SourceBase"><span class="Keyword">func</span> (<span class="SourceBase">i int</span>) <span class="FunctionName">Swim</span>() <span class="SourceBase">{}</span></span>
-
-<span class="SourceBase"><span class="Keyword">func</span> (<span class="SourceBase">d Duck</span>) <span class="FunctionName">WinAtLife</span>() <span class="SourceBase">{}</span></span> <span class="Comment"><span class="Comment">//</span> We can pass this an int</span>
-</pre></pre>
-
-<div class="codeurl">code/interfaces.go</div>
 
 <p><!-- end code --></p>
 
