@@ -140,7 +140,7 @@ How do we access them?
 - Don't worry about it
 
 # Goroutine Example
-<%= code 'code/concurrency.go#goroutines' :lang => 'go' %>
+<%= code 'code/concurrency.go#goroutines', :lang => 'go' %>
 - No access to spawned goroutines
 - No thread.join equivalent
 
@@ -150,6 +150,6 @@ How do we access them?
 - Optionally blocking/non-blocking
 
 # Channel Example
-<%= code 'code/concurrency.go#channels' :lane => 'go' %>
+<%= code 'code/concurrency.go#channels', :lang => 'go' %>
 
 # Interfaces
