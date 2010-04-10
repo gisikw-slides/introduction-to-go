@@ -30,11 +30,11 @@ Like C
 
 # It Runs on Linux and OS X!
 <img src='images/linux.jpg'/>
-<img src='images/snow_leopard'/>
+<img src='images/snow_leopard.jpg'/>
 
 # And Also...
-<img src='vmware.jpg'/>
-<img src='virtualbox.png'/>
+<img src='images/vmware.jpg'/>
+<img src='images/virtualbox.png'/>
 
 # Specifications
 
