@@ -181,11 +181,9 @@ Write functions that operate on particular data
 
 # Packages and Libraries
 - os
-- net
 - websocket
 - math
 - strings
-- bufio
 - encoding
 - json
 - testing
