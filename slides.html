@@ -59,6 +59,28 @@
 
 </div><div class='slide'>
 
+<h1>Hello, world</h1>
+
+<p><!-- begin code{:lang=>"go", :name=>"code/hello_world.go"} --></p>
+
+<pre class='code'>
+<pre class="all_hallows_eve"><span class="Keyword">package</span> main
+
+<span class="Keyword">import</span> <span class="String"><span class="String">&quot;</span>fmt<span class="String">&quot;</span></span>
+
+<span class="SourceBase"><span class="Keyword">func</span> <span class="FunctionName">main</span>() <span class="SourceBase">{</span></span>
+<span class="SourceBase"><span class="SourceBase">  fmt.<span class="SourceBase"><span class="SupportFunction">Printf</span>(</span><span class="String"><span class="String">&quot;</span>Hello, world<span class="StringEscapes">\n</span><span class="String">&quot;</span></span>)</span></span>
+<span class="SourceBase"><span class="SourceBase">}</span></span>
+</pre></pre>
+
+<div class="codeurl">code/hello_world.go</div>
+
+<p><!-- end code --></p>
+
+
+
+</div><div class='slide'>
+
 <h1>Why Go?</h1>
 
 <ul>
@@ -114,23 +136,19 @@ puts this is terrible code
 
 </div><div class='slide'>
 
-<h1>Hello, world</h1>
+<h1>It Runs on Linux and OS X!</h1>
 
-<p><!-- begin code{:lang=>"go", :name=>"code/hello_world.go"} --></p>
+<p><img src='images/linux.jpg'/>
+<img src='images/snow_leopard'/></p>
 
-<pre class='code'>
-<pre class="all_hallows_eve"><span class="Keyword">package</span> main
 
-<span class="Keyword">import</span> <span class="String"><span class="String">&quot;</span>fmt<span class="String">&quot;</span></span>
 
-<span class="SourceBase"><span class="Keyword">func</span> <span class="FunctionName">main</span>() <span class="SourceBase">{</span></span>
-<span class="SourceBase"><span class="SourceBase">  fmt.<span class="SourceBase"><span class="SupportFunction">Printf</span>(</span><span class="String"><span class="String">&quot;</span>Hello, world<span class="StringEscapes">\n</span><span class="String">&quot;</span></span>)</span></span>
-<span class="SourceBase"><span class="SourceBase">}</span></span>
-</pre></pre>
+</div><div class='slide'>
 
-<div class="codeurl">code/hello_world.go</div>
+<h1>And Also...</h1>
 
-<p><!-- end code --></p>
+<p><img src='vmware.jpg'/>
+<img src='virtualbox.png'/></p>
 
 
 
@@ -170,12 +188,16 @@ puts this is terrible code
 <li>[TODO]</li>
 </ul>
 
-<p>Arrays</p>
+<p>Arrays
+<!-- begin code{:part=>"arrays", :lang=>"go", :name=>"code/variables.go"} --></p>
 
-<ul>
-<li>NOT pointers</li>
-<li>Referenced via slices</li>
-</ul>
+<pre class='code'>
+<pre class="all_hallows_eve"><span class="SourceBase"><span class="SourceBase">  <span class="Keyword">var</span> arrayOfInt</span></span> [<span class="Constant">10</span>]<span class="SourceBase">int</span>
+</pre></pre>
+
+<div class="codeurl">code/variables.go</div>
+
+<p><!-- end code --></p>
 
 
 
@@ -189,7 +211,7 @@ puts this is terrible code
 <!-- begin code{:part=>"maps", :lang=>"go", :name=>"code/variables.go"} --></p>
 
 <pre class='code'>
-<pre class="all_hallows_eve">  <span class="SourceBase"><span class="SourceBase">m <span class="Keyword">:=</span></span></span> <span class="Keyword">map</span>[<span class="SourceBase">string</span>] <span class="SourceBase">int</span><span class="SourceBase">{}</span>
+<pre class="all_hallows_eve"><span class="SourceBase"><span class="SourceBase">  <span class="Keyword">var</span> m</span></span> <span class="Keyword">map</span> = <span class="Keyword">map</span>[<span class="SourceBase">string</span>] <span class="SourceBase">int</span><span class="SourceBase">{}</span>
   m[<span class="String"><span class="String">&quot;</span>price<span class="String">&quot;</span></span>] = <span class="Constant">5</span>
 </pre></pre>
 
@@ -210,10 +232,10 @@ puts this is terrible code
 <span class="SourceBase"><span class="SourceBase">  <span class="Keyword">var</span> s</span></span> <span class="SourceBase">string</span> = <span class="String"><span class="String">&quot;</span><span class="String">&quot;</span></span>;
 
   <span class="Comment"><span class="Comment">//</span> Go infers the type</span>
-<span class="SourceBase"><span class="SourceBase">  <span class="Keyword">var</span> s</span></span> = <span class="String"><span class="String">&quot;</span><span class="String">&quot;</span></span>;
+<span class="SourceBase"><span class="SourceBase">  <span class="Keyword">var</span> s2</span></span> = <span class="String"><span class="String">&quot;</span><span class="String">&quot;</span></span>;
 
   <span class="Comment"><span class="Comment">//</span> Syntactic shorthand - initializing declaration</span>
-  <span class="SourceBase"><span class="SourceBase">s <span class="Keyword">:=</span></span></span> <span class="String"><span class="String">&quot;</span><span class="String">&quot;</span></span>;
+  <span class="SourceBase"><span class="SourceBase">s3 <span class="Keyword">:=</span></span></span> <span class="String"><span class="String">&quot;</span><span class="String">&quot;</span></span>;
 </pre></pre>
 
 <div class="codeurl">code/variables.go</div>
@@ -227,10 +249,11 @@ puts this is terrible code
 <h1>Go &#8800; C</h1>
 
 <ul>
-<li>Semicolons optional</li>
+<li>Semicolons optional (implied)</li>
+<li>Curly braces MUST start on the same line</li>
 <li>No parentheses in <code>if</code>s and <code>for</code>s</li>
 <li>Garbage collected</li>
-<li>[TODO]</li>
+<li>Arrays aren't pointers</li>
 </ul>
 
 
@@ -243,6 +266,12 @@ puts this is terrible code
 <li>Pass by value</li>
 <li>Multiple return values</li>
 </ul>
+
+
+
+</div><div class='slide'>
+
+<h1>What? Multiple Return Values?!</h1>
 
 
 
@@ -269,6 +298,24 @@ puts this is terrible code
 </div><div class='slide'>
 
 <h1>Channels</h1>
+
+
+
+</div><div class='slide'>
+
+<h1>Threading</h1>
+
+
+
+</div><div class='slide'>
+
+<h1>Networking</h1>
+
+
+
+</div><div class='slide'>
+
+<h1>Interfaces</h1>
 
 </div></div>
 
