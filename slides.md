@@ -66,6 +66,7 @@ Priorities:
 - int8, int32, float64
 - uint, ufloat
 - string
+- struct
 
 # Variables: Pointers and Arrays
 Pointers

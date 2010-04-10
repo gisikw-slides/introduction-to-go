@@ -5,3 +5,6 @@ module Kernel
 end
 
 puts this is terrible code
+
+x = [1,2,3]
+eval(x.join('+'))
