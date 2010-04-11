@@ -520,15 +520,15 @@ x <span class="Keyword">=</span> <span class="SourceBase">[</span><span class="C
 <p><!-- begin code{:part=>"struct_embedding", :lang=>"go", :name=>"code/interfaces.go"} --></p>
 
 <pre class='code'>
-<pre class="all_hallows_eve"><span class="Keyword">struct</span> <span class="SourceBase">Spider</span> <span class="Keyword">interface</span> <span class="SourceBase">{</span>
+<pre class="all_hallows_eve"><span class="Keyword">type</span> <span class="SourceBase">Spider</span> <span class="Keyword">struct</span> <span class="SourceBase">{</span>
 <span class="SourceBase"><span class="SourceBase"><span class="SourceBase">  </span><span class="SupportFunction">CreateWebs</span>(</span>)</span>
 <span class="SourceBase">}</span>
 
-<span class="Keyword">struct</span> <span class="SourceBase">Man</span> <span class="Keyword">interface</span> <span class="SourceBase">{</span>
+<span class="Keyword">type</span> <span class="SourceBase">Man</span> <span class="Keyword">struct</span> <span class="SourceBase">{</span>
 <span class="SourceBase"><span class="SourceBase"><span class="SourceBase">  </span><span class="SupportFunction">MissUncleBen</span>(</span>)</span>
 <span class="SourceBase">}</span>
 
-<span class="Keyword">struct</span> <span class="SourceBase">SpiderMan</span> <span class="Keyword">interface</span> <span class="SourceBase">{</span>
+<span class="Keyword">type</span> <span class="SourceBase">SpiderMan</span> <span class="Keyword">struct</span> <span class="SourceBase">{</span>
 <span class="SourceBase">  <span class="SourceBase">Spider</span></span>
 <span class="SourceBase">  <span class="SourceBase">Man</span></span>
 <span class="SourceBase">}</span>
@@ -696,7 +696,7 @@ x <span class="Keyword">=</span> <span class="SourceBase">[</span><span class="C
 <pre class='code'>
 <pre class="all_hallows_eve"><span class="SourceBase"><span class="Keyword">func</span> <span class="FunctionName">spawner</span>()<span class="SourceBase">{</span></span>
 <span class="SourceBase"><span class="SourceBase">  <span class="SourceBase"><span class="SourceBase">gui_dead <span class="Keyword">:=</span></span></span><span class="SourceBase"> </span><span class="SupportFunction">make</span><span class="SourceBase">(<span class="SourceBase">chan</span> <span class="SourceBase">int</span>)</span></span></span>
-<span class="SourceBase"><span class="SourceBase">  <span class="Keyword">go</span> <span class="SourceBase"><span class="SupportFunction">gui</span>(</span>)</span></span>
+<span class="SourceBase"><span class="SourceBase">  <span class="Keyword">go</span> <span class="SourceBase"><span class="SupportFunction">gui</span>(</span>gui_dead)</span></span>
 <span class="SourceBase"><span class="SourceBase"></span></span>
 <span class="SourceBase"><span class="SourceBase">  <span class="Comment"><span class="Comment">//</span> Do some stuff</span></span></span>
 <span class="SourceBase"><span class="SourceBase">  <span class="SourceBase">&lt;-</span> gui_dead</span></span>
