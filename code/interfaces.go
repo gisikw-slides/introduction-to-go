@@ -32,15 +32,15 @@ func (m SpiderMan) FightGreenGoblin() {} // Target must CreateWebs() and MissUnc
 //#END:interface_embedding
 
 //#START:struct_embedding
-struct Spider interface {
+type Spider struct {
   CreateWebs()
 }
 
-struct Man interface {
+type Man struct {
   MissUncleBen()
 }
 
-struct SpiderMan interface {
+type SpiderMan struct {
   Spider
   Man
 }

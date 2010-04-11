@@ -58,12 +58,12 @@ func chatter(){
 //#START:thread_join
 func spawner(){
   gui_dead := make(chan int)
-  go gui()
+  go gui(gui_dead)
 
   // Do some stuff
   <- gui_dead
 }
 //#END:thread_join
 
-func gui(){
+func gui(gui_dead chan int){
 }
